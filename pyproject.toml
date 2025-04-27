@@ -1,0 +1,20 @@
+[project]
+name = "RAG-demo"
+version = "0.1.0"
+dependencies = [
+    "faiss-cpu>=1.10.0",
+    "langchain-community>=0.3.22",
+    "langchain-core>=0.3.55",
+    "langchain-text-splitters>=0.3.8",
+    "ollama>=0.4.8",
+    "rich>=14.0.0",
+    "sentence-transformers>=4.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# 添加以下部分来指定包的位置
+[tool.hatch.build.targets.wheel]
+packages = ["src/"]
