@@ -10,6 +10,7 @@ import warnings
 from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
+
 warnings.filterwarnings("ignore")
 
 # 1. 文档处理流水线
@@ -36,7 +37,7 @@ def init_models():
     
     # 初始化本地大模型
     llm = Ollama(
-        model="qwen2.5:3b",
+        model="qwen2.5-coder:14b",
         temperature=0.5,
     )
     
